@@ -17,7 +17,7 @@ public class CubeFlasher : MonoBehaviour
   {
     if (timer <= 0) 
     {
-      cubes[Random.Range(0,cubes.Length-1)].flashCube();
+      cubes[Random.Range(0,cubes.Length)].flashCube();
       timer = speed;
     }
     timer -= Time.deltaTime;

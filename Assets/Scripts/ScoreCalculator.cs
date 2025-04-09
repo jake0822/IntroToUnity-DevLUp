@@ -11,6 +11,7 @@ public class ScoreCalculator : MonoBehaviour
     private bool PlayerScoring;
 
     public TextMeshPro[] Texts;
+    public TextMeshProUGUI UIText;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -32,6 +33,7 @@ public class ScoreCalculator : MonoBehaviour
             {
                 text.text = MathF.Round(timeAlive).ToString();
             }
+            UIText.text = "SCORE: "+ MathF.Round(timeAlive).ToString();
         }
     }
 }
